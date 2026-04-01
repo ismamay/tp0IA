@@ -1,6 +1,7 @@
 package ht.ueh.mbds.tp0_ismael_romelus;
 
 import java.io.*;
+
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -9,7 +10,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "Je salue tout le monde";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

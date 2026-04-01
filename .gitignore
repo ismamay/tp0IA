@@ -9,10 +9,11 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
-
+/target/
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -37,3 +38,17 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+#  Logs 
+*.log
+
+# Java 
+*.class
+
+# OS Windows 
+Thumbs.db
+
+#  Temp files
+*.tmp
+*.swp
+*.swo
