@@ -12,12 +12,25 @@ public class Modificateur implements Serializable {
 
     public String modifier(String question, String role) {
 
-        String result = "|| " + question.toUpperCase() + " ||";
+        String base = "|| " + question.toUpperCase() + " ||";
 
-        if (role != null) {
-            result = role.toUpperCase() + "\n" + result;
+        String type;
+
+        if (question.trim().endsWith("?")) {
+            type = "on dirait que vous avez posé une question. mais je ne peux pas repondre pour l'instant. je suis en construction... ";
+        } else if (question.trim().endsWith("!")) {
+            type = "Ceci semble être une exclamation";
+        } else {
+            type = "Ceci semble être une phrase normale";
         }
 
-        return result;
+        String resultat = base + "\n" + type;
+
+        // Ajouter le rôle seulement pour la première question
+        if (role != null) {
+            resultat = role.toUpperCase() + "\n" + resultat;
+        }
+
+        return resultat;
     }
 }
